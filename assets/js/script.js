@@ -63,3 +63,8 @@ function loadEvents() {
   }
 }
 
+// Function to save events to local storage
+function saveEvent(hour, event) {
+  localStorage.setItem('hour-' + hour, event);
+}
+
