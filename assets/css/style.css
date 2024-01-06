@@ -4,13 +4,14 @@ body {
   line-height: 1;
 }
 
-textarea {
+textArea {
   background: transparent;
   border: none;
   resize: none;
   color: #000000;
   border-left: 1px solid black;
   padding: 10px;
+
 }
 
 header {
@@ -26,9 +27,15 @@ header {
   white-space: pre-wrap;
 }
 
+p #currentDay  {
+  font-size: 12px;
+}
+
+
 .time-block {
   text-align: center;
   border-radius: 15px;
+
 }
 
 .row {
@@ -41,6 +48,8 @@ header {
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
+  padding: 20px;
+
 }
 
 .past {
@@ -64,9 +73,25 @@ header {
   border-bottom-right-radius: 15px;
   background-color: #06aed5;
   color: white;
+
 }
 
 .saveBtn i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
+}
+
+#currentDay {
+  font-size: 45px;
+}
+
+.time-div {
+  background-color: white;
+  color: black;
+  border: 3px solid gray;
+  border-left: none;
+}
+
+i {
+  font-size: 24px;
 }
