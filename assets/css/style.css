@@ -4,16 +4,6 @@ body {
   line-height: 1;
 }
 
-textArea {
-  background: transparent;
-  border: none;
-  resize: none;
-  color: #000000;
-  border-left: 1px solid black;
-  padding: 10px;
-
-}
-
 header {
   text-align: center;
   background-color: transparent;
@@ -23,6 +13,7 @@ header {
   padding: 60px;
 }
 
+
 .description {
   white-space: pre-wrap;
 }
@@ -31,24 +22,48 @@ p #currentDay  {
   font-size: 12px;
 }
 
-
 .time-block {
   text-align: center;
   border-radius: 15px;
 
+
 }
+
+
+
+/* .form-control {
+  background: transparent; !important;
+  border: none;
+} */
+
+textArea {
+  background: transparent;
+  border: none;
+  resize: none;
+  color: #000000;
+  /* border-left: 1px solid black; */
+  padding: 10px;
+
+}
+
 
 .row {
   white-space: pre-wrap;
   height: 80px;
   border-top: 1px solid white;
-}
+  background: transparent;
+  /* display: flex;
+  align-items: center; */
+  }
+  
 
 .hour {
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
-  padding: 20px;
+  text-align: right;
+  padding-top: 5px;
+
 
 }
 
@@ -67,30 +82,51 @@ p #currentDay  {
   color: white;
 }
 
+.saveBtnContainer {
+
+    border-left: 1px solid black;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: #0d6efd; !important;
+    color: white;
+    padding-top: 5px;
+  
+  
+  }
+
+
 .saveBtn {
-  border-left: 1px solid black;
+  /* border-left: 1px solid black;
   border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background-color: #06aed5;
-  color: white;
+  border-bottom-right-radius: 15px; */
+  /* background-color: #06aed5; !important; 
+  */
+  background-color: #0d6efd;
+  color: white; 
+  border: none;
+  font-size: 30px;
+
 
 }
 
 .saveBtn i:hover {
-  font-size: 20px;
+  font-size: 40px;
   transition: all 0.3s ease-in-out;
+  background-color: #0d6efd;
+  color: white; 
 }
+
 
 #currentDay {
-  font-size: 45px;
+  font-size: 25px;
 }
 
-.time-div {
+/* .time-div {
   background-color: white;
   color: black;
   border: 3px solid gray;
   border-left: none;
-}
+} */
 
 i {
   font-size: 24px;

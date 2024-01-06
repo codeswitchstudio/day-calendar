@@ -1,120 +1,70 @@
-// save reference to important DOM elements
-const text-areaEl = $('#time-display');
-const projectDisplayEl = $('#project-display');
-const projectModalEl = $('#project-modal');
-const projectFormEl = $('#project-form');
-const projectNameInputEl = $('#project-name-input');
-const projectTypeInputEl = $('#project-type-input');
-const hourlyRateInputEl = $('#hourly-rate-input');
-const dueDateInputEl = $('#due-date-input');
 
-
-text-area 
-time-block
-row
-hour
-past
-present
-future
-saveBtn
-
-
-//Display the current day at the top of the calender when a user opens the planner.
-
-//Present time blocks for standard business hours when the user scrolls down.
+// Function to update the current time and date
+function updateDateTime() {
+  var currentTime = dayjs().format('dddd DD MMMM HH:mm:ss');
+  $('#currentDay').html(currentTime);
+}
+// Update the current time and date initially
+updateDateTime();
+// Set up a setInterval to update the time and date every second (1000 milliseconds)
+setInterval(updateDateTime, 1000);
 
 
 
+// Function to create time blocks
+function createTimeBlocks() {
+  var currentHour = dayjs().hour();
 
+  for (var i = 9; i <= 17; i++) {
+    var timeBlock = $('<div>').addClass('time-block row');
+    var hour = dayjs().hour(i).format('HH');
+    var textArea = $('<textarea>').addClass('textArea form-control'); // Added Bootstrap class for styling
+    var saveBtn = $('<button>').addClass('saveBtn btn btn-primary').html('<i class="far fa-save"></i>'); // Added Bootstrap button classes
 
+    if (i < currentHour) {
+      timeBlock.addClass('past');
+    } else if (i === currentHour) {
+      timeBlock.addClass('present');
+    } else {
+      timeBlock.addClass('future');
+    }
 
-// Color-code each time block based on past, present, and future when the time block is viewed.
+    // First Column - Hour
+    timeBlock.append($('<div>').addClass('col-2 hour').text(hour));
 
-// Allow a user to enter an event when they click a time block
+    // Second Column - Description with Text Area
+    timeBlock.append($('<div>').addClass('col-9').append($('<div>').addClass('description').append(textArea)));
 
-// Save the event in local storage when the save button is clicked in that time block.
+    // Third Column - Save Button Container with Button Inside
+    timeBlock.append($('<div>').addClass('col-1 saveBtnContainer').append(saveBtn));
 
-// Persist events between refreshes of a page
-
-
-
-
-// handle displaying the time
-function displayTime() {
-  const rightNow = dayjs().format('DD MMM YYYY [at] hh:mm:ss a');
-  timeDisplayEl.text(rightNow);
+    $('.container').append(timeBlock);
+  }
 }
 
-// handle printing project data to the page
-function printProjectData(name, type, hourlyRate, dueDate) {
-  const projectRowEl = $('<tr>');
+// Call the function to create time blocks
+createTimeBlocks();
 
-  const projectNameTdEl = $('<td>').addClass('p-2').text(name);
 
-  const projectTypeTdEl = $('<td>').addClass('p-2').text(type);
 
-  const rateTdEl = $('<td>').addClass('p-2').text(hourlyRate);
-
-  const dueDateTdEl = $('<td>').addClass('p-2').text(dueDate);
-
-  const daysToDate = dayjs(dueDate).diff(dayjs(), 'days');
-  const daysLeftTdEl = $('<td>').addClass('p-2').text(daysToDate);
-
-  const totalEarnings = calculateTotalEarnings(hourlyRate, daysToDate);
-
-  // You can also chain methods onto new lines to keep code clean
-  const totalTdEl = $('<td>')
-    .addClass('p-2')
-    .text('$' + totalEarnings);
-
-  const deleteProjectBtn = $('<td>')
-    .addClass('p-2 delete-project-btn text-center')
-    .text('X');
-
-  // By listing each `<td>` variable as an argument, each one will be appended in that order
-  projectRowEl.append(
-    projectNameTdEl,
-    projectTypeTdEl,
-    rateTdEl,
-    dueDateTdEl,
-    daysLeftTdEl,
-    totalTdEl,
-    deleteProjectBtn
-  );
-
-  projectDisplayEl.append(projectRowEl);
-
-  projectModalEl.modal('hide');
+// Function to load events from local storage
+function loadEvents() {
+  for (var i = 9; i <= 17; i++) {
+    var event = localStorage.getItem('hour-' + i);
+    if (event) {
+      $('#hour-' + i).val(event);
+    }
+  }
 }
 
-function calculateTotalEarnings(rate, days) {
-  const dailyTotal = rate * 8;
-  const total = dailyTotal * days;
-  return total;
+// Function to save events to local storage
+function saveEvent(hour, event) {
+  localStorage.setItem('hour-' + hour, event);
 }
 
-function handleDeleteProject(event) {
-  console.log(event.target);
-  const btnClicked = $(event.target);
-  btnClicked.parent('tr').remove();
-}
-
-// handle project form submission
-function handleProjectFormSubmit(event) {
-  event.preventDefault();
-
-  const projectName = projectNameInputEl.val().trim();
-  const projectType = projectTypeInputEl.val().trim();
-  const hourlyRate = hourlyRateInputEl.val().trim();
-  const dueDate = dueDateInputEl.val().trim();
-
-  printProjectData(projectName, projectType, hourlyRate, dueDate);
-
-  projectFormEl[0].reset();
-}
-
-projectFormEl.on('submit', handleProjectFormSubmit);
-projectDisplayEl.on('click', '.delete-project-btn', handleDeleteProject);
-dueDateInputEl.datepicker({ minDate: 1, dateFormat: 'yy/mm/dd' });
-
-setInterval(displayTime, 1000);
+// Event listener for save buttons
+$(document).on('click', 'button', function () {
+  var hour = $(this).attr('data-hour');
+  var event = $('#hour-' + hour).val();
+  saveEvent(hour, event);
+});
