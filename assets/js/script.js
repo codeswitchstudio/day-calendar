@@ -68,3 +68,9 @@ function saveEvent(hour, event) {
   localStorage.setItem('hour-' + hour, event);
 }
 
+// Event listener for save buttons
+$(document).on('click', 'button', function () {
+  var hour = $(this).attr('data-hour');
+  var event = $('#hour-' + hour).val();
+  saveEvent(hour, event);
+});
