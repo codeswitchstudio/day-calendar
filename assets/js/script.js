@@ -52,3 +52,14 @@ function createTimeBlocks() {
 // Call the function to create time blocks
 createTimeBlocks();
 
+
+// Function to load events from local storage
+function loadEvents() {
+  for (var i = 9; i <= 17; i++) {
+    var event = localStorage.getItem('hour-' + i);
+    if (event) {
+      $('#hour-' + i).val(event);
+    }
+  }
+}
+
