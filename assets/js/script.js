@@ -53,16 +53,6 @@ function createTimeBlocks() {
 createTimeBlocks();
 
 
-// Function to load events from local storage
-function loadEvents() {
-  for (var i = 9; i <= 17; i++) {
-    var event = localStorage.getItem('hour-' + i);
-    if (event) {
-      $('#hour-' + i).val(event);
-    }
-  }
-}
-
 // Function to save events to local storage
 function saveEvent(hour, event) {
   localStorage.setItem('hour-' + hour, event);
@@ -74,3 +64,13 @@ $(document).on('click', 'button', function () {
   var event = $('#hour-' + hour).val();
   saveEvent(hour, event);
 });
+
+// Function to load events from local storage
+function loadEvents() {
+  for (var i = 9; i <= 17; i++) {
+    var event = localStorage.getItem('hour-' + i);
+    if (event) {
+      $('#hour-' + i).val(event);
+    }
+  }
+}
