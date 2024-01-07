@@ -19,29 +19,25 @@ The app should:
 ## Deployment
 Link to the deployed application 
 
-]
 
-<<<<<<< HEAD
 ## Screenshots
 
-![Landing page](./assets/img/Screenshot01.png)
+![Landing page](./assets/images/screenshot-workDay.png)
 
 
 
-=======
->>>>>>> d56568d376f4b97df1c6a7e725a784c52e8365af
 ## Credits
 
 Thank you to our bootcamp instructor Laura Cole, Student Success Advisor Jesse Pacheco, our pod TA Kimberly Rodriguez, and my patient tutors.
 
 References:
-[Stackoverflow] 
-(https://stackoverflow.com/questions/76115702/how-do-i-save-a-button-that-has-been-clicked-to-local-storage
-)
+[StackOverflow] 
+(https://stackoverflow.com/questions/76115702/how-do-i-save-a-button-that-has-been-clicked-to-local-storage)
 (https://stackoverflow.com/questions/64561296/work-day-calendar-appending-3-divs-together-dynamically-via-js-trying-to-flu)
 
 [Free Code Camp] 
-(https://forum.freecodecamp.org/t/simple-javascript-quiz-problem/291032/4)
+https://www.freecodecamp.org/news/web-storage-localstorage-vs-sessionstorage-in-javascript/
+
 [Chat GPT] 
 (https://chat.openai.com/)
 
@@ -64,8 +60,4 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-<<<<<<< HEAD
 SOFTWARE.
-=======
-SOFTWARE.
->>>>>>> d56568d376f4b97df1c6a7e725a784c52e8365af
