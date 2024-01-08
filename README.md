@@ -42,6 +42,9 @@ References:
 [Coolors]
 (http://coolors.co)
 
+[GifDB]
+(https://gifdb.com/gif/hamster-wheel-black-white-art-gaz03ibs21emzjwz.html)
+
 [Chat GPT]
 (https://chat.openai.com/)
 
