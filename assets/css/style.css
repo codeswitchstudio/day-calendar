@@ -14,12 +14,12 @@ header {
 }
 
 
-#hamster  {
+/* #hamster  {
   background-image: url("./assets/images/hamster.gif");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-}
+} */
 
 h1 {
   font-family: 'Alegreya', 'Franklin Gothic Medium', Arial, sans-serif;
