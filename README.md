@@ -8,7 +8,7 @@ This is a simple calendar application that allows a user to save events for each
 
 The app should:
 
-* Display the current day at the top of the calender when a user opens the planner.
+* Display the current day at the top of the calendar when a user opens the planner.
 * Present time blocks for standard business hours when the user scrolls down.
 * Color-code each time block based on past, present, and future when the time block is viewed.
 * Allow a user to enter an event when they click a time block
@@ -17,11 +17,12 @@ The app should:
   
 ## Deployment
 
-Link to the deployed application
+[Link to the deployed application]
+(https://codeswitchstudio.github.io/day-calendar/)
 
 ## Screenshots
 
-![Landing page](./assets/images/screenshot-workDay.png)
+![Landing page](./assets/images/work-day.png)
 
 ## Credits
 
