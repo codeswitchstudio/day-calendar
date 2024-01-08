@@ -1,11 +1,11 @@
-# Work Day Planner!
-
+# Work Day Planner
 
 ## Description
+
 This is a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
 
-
 ## Usage
+
 The app should:
 
 * Display the current day at the top of the calender when a user opens the planner.
@@ -15,36 +15,37 @@ The app should:
 * Save the event in local storage when the save button is clicked in that time block.
 * Persist events between refreshes of a page
   
-
 ## Deployment
-Link to the deployed application 
 
+Link to the deployed application
 
 ## Screenshots
+
 ![Landing page](./assets/images/screenshot-workDay.png)
 
-
 ## Credits
-Shout out to my tutor this week, Alexis San Javier, for improving my understanding of Local Storage and JQuery events.
+
+Shout out to my tutor this week, Alexis San Javier, for helping me wrap my head around Local Storage and JQuery events.
 
 References:
 
 [JQuery API Documentation]
-(https://api.jquery.com/click/)
+(https://api.jquery.com/click)
 
-[StackOverflow]
+[Stack Overflow]
 (https://stackoverflow.com/questions/76115702/how-do-i-save-a-button-that-has-been-clicked-to-local-storage)
 
 [Free Code Camp]
-https://www.freecodecamp.org/news/web-storage-localstorage-vs-sessionstorage-in-javascript/
-
-[Chat GPT]
-(https://chat.openai.com/)
+(https://www.freecodecamp.org/news/web-storage-localstorage-vs-sessionstorage-in-javascript/)
 
 [Coolors]
 (http://coolors.co)
 
+[Chat GPT]
+(https://chat.openai.com/)
+
 ## License
+
 MIT License
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
