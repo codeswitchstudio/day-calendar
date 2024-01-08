@@ -1,4 +1,4 @@
-# Hello 9-5 Grind!
+# Work Day Planner!
 
 
 ## Description

@@ -11,9 +11,7 @@ header {
   border-radius: 0;
   /* border-bottom: 1px solid black; */
   padding: 60px;
-
 }
-
 
 
 h1 {
@@ -24,7 +22,6 @@ p .phrase  {
   font-family: 'Alegreya', 'Franklin Gothic Medium', Arial, sans-serif;
   color: #2AD5DB;
 }
-
 
 .description {
   white-space: pre-wrap;
@@ -41,11 +38,6 @@ p #currentDay  {
 }
 
 
-/* .form-control {
-  background: transparent; !important;
-  border: none;
-} */
-
 textArea {
   background: transparent;
   border: none;
@@ -55,11 +47,6 @@ textArea {
   padding: 10px;
 
 }
-
-/* textArea .past {
-  color: white;
-} */
-
 
 
 .row {
@@ -81,14 +68,10 @@ textArea {
   padding-right: 15px;
 }
 
-
-
 .past {
   /* background-color: #7e8287; */
   background-color: #9da39a;
 }
-
-
 
 
 .future {
@@ -127,9 +110,6 @@ textArea {
   border: none;
   font-size: 30px;
   padding-right: 10px;
-  
-
-
 }
 
 .saveBtn i:hover {
