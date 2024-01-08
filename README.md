@@ -8,8 +8,8 @@ This is a simple calendar application that allows a user to save events for each
 ## Usage
 The app should:
 
-* Display the current day at the top of the calender when a user opens the planner. 
-* Present time blocks for standard business hours when the user scrolls down. 
+* Display the current day at the top of the calender when a user opens the planner.
+* Present time blocks for standard business hours when the user scrolls down.
 * Color-code each time block based on past, present, and future when the time block is viewed.
 * Allow a user to enter an event when they click a time block
 * Save the event in local storage when the save button is clicked in that time block.
@@ -21,25 +21,28 @@ Link to the deployed application
 
 
 ## Screenshots
-
 ![Landing page](./assets/images/screenshot-workDay.png)
 
 
-
 ## Credits
-
-Thank you to our bootcamp instructor Laura Cole, Student Success Advisor Jesse Pacheco, our pod TA Kimberly Rodriguez, and my patient tutors.
+Shout out to my tutor this week, Alexis San Javier, for improving my understanding of Local Storage and JQuery events.
 
 References:
-[StackOverflow] 
-(https://stackoverflow.com/questions/76115702/how-do-i-save-a-button-that-has-been-clicked-to-local-storage)
-(https://stackoverflow.com/questions/64561296/work-day-calendar-appending-3-divs-together-dynamically-via-js-trying-to-flu)
 
-[Free Code Camp] 
+[JQuery API Documentation]
+(https://api.jquery.com/click/)
+
+[StackOverflow]
+(https://stackoverflow.com/questions/76115702/how-do-i-save-a-button-that-has-been-clicked-to-local-storage)
+
+[Free Code Camp]
 https://www.freecodecamp.org/news/web-storage-localstorage-vs-sessionstorage-in-javascript/
 
-[Chat GPT] 
+[Chat GPT]
 (https://chat.openai.com/)
+
+[Coolors]
+(http://coolors.co)
 
 ## License
 MIT License
